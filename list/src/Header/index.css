@@ -1,6 +1,9 @@
 .Head{
-color: blanchedalmond;
+    color: aquamarine;
+    height: 50px;
+    background-color:aquamarine;
 }
 .Text{
-    color:aliceblue;
+    color:rgb(0, 136, 255);
+    
 }

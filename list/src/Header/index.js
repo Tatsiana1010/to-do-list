@@ -4,8 +4,9 @@ import './index.css';
 
 export default function Header(){
     return(
-        <div className="Head">
+        <div>
+        <div className="Head"></div>
         <h1 className="Text">TO-DO-LIST</h1>
-        </div>
+       </div>
     );
 }
