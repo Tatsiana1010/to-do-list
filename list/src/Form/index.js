@@ -13,7 +13,7 @@ export default function Form({onAdd}){
     }
     
     return(
-<form><label>Add your task:</label><input onChange={onNameChange} type="text" name="add" id="task"></input><button onClick={onSubmit} type="submit">Отправить</button></form>
+<form><label>Add your task:</label><input className="form1" onChange={onNameChange} type="text" name="add" id="task"></input><button  className="btn btn-primary" onClick={onSubmit} type="submit">send</button></form>
 
     );
 }

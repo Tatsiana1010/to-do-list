@@ -4,6 +4,7 @@ import './App.css';
 import Header from './Header';
 import Form from './Form';
 import Tasklist from './list';
+import FormPoisk from './FormPoisk';
 
   
  
@@ -15,7 +16,9 @@ function App(){
 
   return (
     <>
-    <Header/><Form onAdd={()=>{}}/><Tasklist/>
+    <Header/>
+    <Tasklist/>
+    
     </>
   );
   
