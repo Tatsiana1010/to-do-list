@@ -6,10 +6,25 @@ export default function Form({onAdd}){
     const [taskName,setTaskName]=useState("");
     const onNameChange = (event)=>{
         setTaskName(event.target.value);
+        localStorage.setItem('onNameChange',JSON.stringify(onNameChange));
+        let b=localStorage.getItem('onNameChange');
+        b=JSON.parse(b);
+       
     }
     const onSubmit= (event)=>{
         event.preventDefault();
         onAdd(taskName)
+        localStorage.setItem('onSubmit',JSON.stringify(onSubmit));
+        let d=localStorage.getItem('onSubmit');
+        d=JSON.parse(d);
+
+
+  
+
+        
+                
+ 
+
     }
     
     return(
