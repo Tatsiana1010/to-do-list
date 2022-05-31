@@ -10,9 +10,8 @@ export default function Tasklist() {
 
     function AddItem(name) {
         setlist([name, ...list])
-        localStorage.setItem('setlist',JSON.stringify(setlist));
-        let f=localStorage.getItem('setlist');
-        f=JSON.parse(f);
+        localStorage.setItem('setlist',JSON.stringify(list));
+        
     }
     function DeletateItem(deleteIndex) {
         setlist(list.filter((value, index) => index != deleteIndex))
