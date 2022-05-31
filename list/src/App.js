@@ -5,7 +5,7 @@ import Header from './Header';
 import Form from './Form';
 import Tasklist from './list';
 import FormPoisk from './FormPoisk';
-
+import Headerer from './Header';
 
   
  
@@ -17,7 +17,7 @@ function App(){
 
   return (
     <>
-    <Header/>
+    <Headerer/>
    
 
     <Tasklist/>
