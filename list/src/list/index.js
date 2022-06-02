@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect,useState} from "react";
 import Form from "../Form";
 import FormPoisk from "../FormPoisk";
 import './index.css';
@@ -9,13 +9,18 @@ export default function Tasklist() {
     const [getFilter,setFilter]=useState('')
 
     function AddItem(name) {
-        setlist([name, ...list])
-        localStorage.setItem('setlist',JSON.stringify(list));
+        let data=setlist([name, ...list])
+        localStorage.setItem('list',JSON.stringify(data));
+        setlist(data);
         
     }
+ 
+    
     function DeletateItem(deleteIndex) {
-        setlist(list.filter((value, index) => index != deleteIndex))
-
+        let data=setlist(list.filter((value, index) => index != deleteIndex))
+        setlist(data);
+        localStorage.setItem('list',JSON.stringify(data));
+        
     }
 
     function onFilter(nameFilter){

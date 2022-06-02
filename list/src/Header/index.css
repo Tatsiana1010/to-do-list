@@ -4,17 +4,28 @@
     font-weight: bold;
     font-family:Arial, Helvetica, sans-serif;
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-
     
-     
- }
+    
+}
+    
  .Head{
     height: 70px;
     background: linear-gradient(45deg, #a7e5f8, #3936cc);
+    
     }
+    .About{
+       display:inline-block;
+padding:5px;
+
+}
+.About:hover{
+      color:white;
+}
+.Blog:hover{
+   color:white;
+}
+    
+    
 
 
 
