@@ -9,16 +9,23 @@ export default function Tasklist() {
     const [getFilter,setFilter]=useState('')
 
     function AddItem(name) {
-        let data=setlist([name, ...list])
-        localStorage.setItem('list',JSON.stringify(data));
+        let data=[name, ...list];
         setlist(data);
+        localStorage.setItem('list',JSON.stringify(data));
+        
         
     }
- 
+ useEffect(()=>{
+let dataJson = localStorage.getItem('list');
+if(dataJson !==null && dataJson.length>1){
+    let data = JSON.parse(dataJson);
+    setlist(data);
+}
+ });
     
     function DeletateItem(deleteIndex) {
-        let data=setlist(list.filter((value, index) => index != deleteIndex))
-        setlist(data);
+        let data=list.filter((value, index) => index != deleteIndex);
+        setlist(data)
         localStorage.setItem('list',JSON.stringify(data));
         
     }
